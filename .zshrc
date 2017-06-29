@@ -1,3 +1,5 @@
+trap "source ~/.zshrc" USR1 # source whenever zsh receives a USR1 signal
+
 # oh-my-zsh default {{{
 export UPDATE_ZSH_DAYS=7
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
