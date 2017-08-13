@@ -154,10 +154,14 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'flazz/vim-colorschemes'
 Plug 'skammer/vim-css-color'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tmhedberg/matchit'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -167,7 +171,7 @@ Plug 'mattn/emmet-vim'
 Plug 'sjl/gundo.vim'
 Plug 'vim-scripts/L9'
 Plug 'danro/rename.vim'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
