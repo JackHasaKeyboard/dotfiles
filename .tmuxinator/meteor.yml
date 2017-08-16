@@ -1,0 +1,11 @@
+name: meteor
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - editor: vim
+
+  - cmd:
+    -
+
+  - server: meteor

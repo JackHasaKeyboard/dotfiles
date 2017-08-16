@@ -161,36 +161,6 @@ function temp() {
 	git clone -C ~/"$1"/ https://github.com/jackhasakeyboard/"$1"-template
 }
 
-function ror-sess() {
-	cd ~/ror/$1;
-	tmux;
-	xdotool key ctrl+a;
-	xdotool key h;
-	rails s;
-	xdotool key ctrl+a;
-	xdotool key colon;
-	xdotool type new-window;
-	xdotool key Return;
-	vim;
-}
-
-function sess() {
-	if [ "$1" = "ror" ]; then
-		start = "rails s"
-		cd ~/ror/"$1";
-	elif [ "$1" = "meteor" ]; then
-		start = "meteor"
-	elif [ "$1" = "py" ]; then
-		start = "python manage.py runserver 3000"
-	fi
-
-	tmux;
-	$start;
-	xdotool key ctrl+a;
-	xdotool key h;
-	tmux new-window -n "vim"
-}
-
 function add-gem() {
 	echo "gem '$1'" >> Gemfile
 }
@@ -232,4 +202,6 @@ zsh-syntax-highlighting
 )
 
 source $HOME/.zshenv
+
+source ~/.bin/tmuxinator.zsh
 # }}}
