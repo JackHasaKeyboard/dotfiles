@@ -105,9 +105,9 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 noremap <silent> <C-F> :NERDTreeToggle<CR>
 
-cnoreabbr nt NERDTree
-cnoreabbr rc e ~/.vimrc
-cnoreabbr td sp ~/Dropbox/note/todo.txt
+command Nt NERDTree
+command Rc sp ~/.vimrc
+command Td sp ~/Dropbox/note/todo.txt
 " }}}
 
 " macro {{{
