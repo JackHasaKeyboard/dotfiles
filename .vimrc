@@ -31,10 +31,11 @@ augroup END
 syntax on
 filetype indent on
 
+set nohls
+
 let &t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-set hls!
 " set NoMatchParen
 
 setlocal foldmethod=expr
