@@ -46,6 +46,8 @@ set ts=2 sw=2
 set softtabstop=0
 set smartindent
 set noexpandtab
+
+set wrap!
 " }}}
 
 " search {{{
