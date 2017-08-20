@@ -68,7 +68,7 @@ nnoremap <Leader>u o<Esc>O<Esc>i
 nnoremap <Leader>U O<Esc>o<Esc>i
 nnoremap <Leader>U O<Esc>o<Esc>i
 
-nnoremap <Leader>j :join
+nnoremap  <Leader>j :join<CR>
 " }}}
 
 nnoremap <Leader>= K=J''
