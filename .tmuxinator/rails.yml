@@ -1,0 +1,11 @@
+name: rails
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - editor: vim
+
+  - cmd:
+    -
+
+  - server: rails s
