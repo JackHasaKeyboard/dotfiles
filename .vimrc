@@ -6,16 +6,14 @@ autocmd VimEnter * wincmd p
 set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep
 set wildignore+=**/tmp/**,/vendor/**
 
-set undodir=~/.vim/undo//
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
+set nobackup
+set nowritebackup
+" set undofile
+" set undolevels=1000
+" set undoreload=10000
 " }}}
 
 " buffer {{{
-set undofile
-set undolevels=1000
-set undoreload=10000
-
 set lazyredraw
 
 au VimResized * exe "normal! \<C-W>="
