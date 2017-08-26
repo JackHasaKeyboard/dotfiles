@@ -45,6 +45,16 @@ set softtabstop=0
 set smartindent
 set noexpandtab
 
+function! InsertIndent()
+	if len(getline('.')) == 0
+		return '"_cc'
+	else
+		return 'i'
+	endif
+endfunction
+
+nnoremap <expr> i InsertIndent()
+
 set wrap!
 " }}}
 
@@ -59,10 +69,10 @@ let mapleader=","
 nnoremap <Leader>h :bprev<CR>
 nnoremap <Leader>l :bnext<CR>
 
-nnoremap <Leader>b 2o<Esc>i
-nnoremap <Leader>B O<Esc>O<Esc>i
-nnoremap <Leader>u o<Esc>O<Esc>i
-nnoremap <Leader>U O<Esc>o<Esc>i
+nnoremap <Leader>b o<Esc>o<Esc>S
+nnoremap <Leader>B O<Esc>O<Esc>S
+nnoremap <Leader>u o<Esc>O<Esc>S
+nnoremap <Leader>U O<Esc>o<Esc>S
 
 nnoremap  <Leader>j :join<CR>
 
