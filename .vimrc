@@ -19,7 +19,6 @@ set lazyredraw
 au VimResized * exe "normal! \<C-W>="
 " autocmd BufWritePre *.haml, *.js, *.scss :silent !chrome window.location.reload()
 
-" todo source vimrc
 augroup vimrc
 	autocmd! BufWritePost .vimrc source % | echom "Reloaded " . .vimrc | redraw
 augroup END
