@@ -1,3 +1,7 @@
+augroup vimrc
+	autocmd! BufWritePost .vimrc source % | echom "Reloaded " . .vimrc | redraw
+augroup END
+
 " dir {{{
 autocmd VimEnter * wincmd p
 " }}}
@@ -18,10 +22,6 @@ set lazyredraw
 
 au VimResized * exe "normal! \<C-W>="
 " autocmd BufWritePre *.haml, *.js, *.scss :silent !chrome window.location.reload()
-
-augroup vimrc
-	autocmd! BufWritePost .vimrc source % | echom "Reloaded " . .vimrc | redraw
-augroup END
 " }}}
 
 " syntax {{{
@@ -63,14 +63,13 @@ nnoremap <Leader>b 2o<Esc>i
 nnoremap <Leader>B O<Esc>O<Esc>i
 nnoremap <Leader>u o<Esc>O<Esc>i
 nnoremap <Leader>U O<Esc>o<Esc>i
-nnoremap <Leader>U O<Esc>o<Esc>i
 
 nnoremap  <Leader>j :join<CR>
-" }}}
 
 nnoremap <Leader>= K=J''
 
 nnoremap <Leader>w :set wrap!
+" }}}
 
 noremap r <C-r>
 
