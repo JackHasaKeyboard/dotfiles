@@ -7,8 +7,10 @@ autocmd VimEnter * wincmd p
 " }}}
 
 " file {{{
-set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep
-set wildignore+=**/tmp/**,/vendor/**
+let g:ctrlp_custom_ignore = {
+			\ 'dir':  'tmp$\|vendor$\|node_modules$',
+			\ 'file': '\.(swp$\|\lock$\|\gz$\|\DS_Store\|keep)$'
+			\ }
 
 set nobackup
 set nowritebackup
