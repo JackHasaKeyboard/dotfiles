@@ -65,13 +65,7 @@ alias td="vim ~/Dropbox/note/todo.txt"
 
 alias restart-pg="sudo pg_ctlcluster 9.5 main restart"
 
-alias init-git="
-git init;
-git add .;
-git commit -m 'Init commit'
-"
-
-alias rm-deleted="git ls-files --deleted -z | xargs -0 git rm"
+alias sess="tmuxinator"
 # }}}
 
 alias psql="sudo -u postgres psql"
