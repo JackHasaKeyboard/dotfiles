@@ -129,7 +129,7 @@ function mk-remote() {
 
 function note() {
 	if [ "$1" != "" ]; then
-		vim ~/Dropbox/note/"$1".txt
+		vim ~/Dropbox/note/"$1".org
 	else
 		vim ~/Dropbox/note/
 	fi
