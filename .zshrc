@@ -147,12 +147,8 @@ function cmd() {
 	google-chrome "cmd.jackhasakeyboard.co/$1"
 }
 
-function ror-temp() {
-	git -C ~/ror/ clone https://github.com/jackhasakeyboard/ror-template "$1"
-}
-
 function temp() {
-	git clone -C ~/"$1"/ https://github.com/jackhasakeyboard/"$1"-template
+	git clone "https://github.com/jackhasakeyboard/$1-template" $2
 }
 
 function add-gem() {
