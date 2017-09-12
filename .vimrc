@@ -144,6 +144,19 @@ let g:python_host_prog='/usr/bin/python'
 let g:user_emmet_expandabbr_key='<Tab>'
 " }}}
 
+" textobj-user {{{
+call textobj#user#plugin('css-val', {
+\   'include-unit': {
+\     'pattern': ':\s\zs.*\ze;',
+\     'select': ['av'],
+\   },
+\   'disclude-unit': {
+\     'pattern': ':\s\zs.*\ze\(em\|ex\|%\|px\|cm\|mm\|in\|pt\|pc\|ch\|rem\|vh\|vw\|vmin\|vmax\|cm\|mm\|in\|px *\|pt\|pc\);',
+\     'select': ['iv'],
+\   },
+\ })
+" }}}
+
 " augroup line_return
 " au!
 " au BufReadPost *
@@ -165,6 +178,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'kana/vim-textobj-user'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'flazz/vim-colorschemes'
