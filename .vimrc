@@ -4,7 +4,7 @@ autocmd VimEnter * wincmd p
 
 " file {{{
 set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep
-set wildignore+=**/tmp/**,/vendor/**
+set wildignore+=**/tmp/**,/vendor/**,node_modules/**
 
 set undodir=~/.vim/undo//
 set backupdir=~/.vim/backup//
