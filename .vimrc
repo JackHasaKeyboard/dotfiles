@@ -1,40 +1,47 @@
+augroup vimrc
+	autocmd! BufWritePost .vimrc source % | echom "Reloaded " . .vimrc | redraw
+augroup END
+
 " dir {{{
 autocmd VimEnter * wincmd p
 " }}}
 
 " file {{{
 set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep
-set wildignore+=**/tmp/**,/vendor/**,node_modules/**
+set wildignore+=**/tmp/**,/vendor/**
 
 set undodir=~/.vim/undo//
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
+
+let g:ctrlp_custom_ignore = {
+			\ 'dir':  'tmp$\|vendor$\|node_modules$',
+			\ 'file': '\.(swp$\|\lock$\|\gz$\|\DS_Store\|keep)$'
+			\ }
+
+set nobackup
+set nowritebackup
+" set undofile
+" set undolevels=1000
+" set undoreload=10000
 " }}}
 
 " buffer {{{
-set undofile
-set undolevels=1000
-set undoreload=10000
-
 set lazyredraw
 
 au VimResized * exe "normal! \<C-W>="
 " autocmd BufWritePre *.haml, *.js, *.scss :silent !chrome window.location.reload()
-
-" todo source vimrc
-augroup vimrc
-	autocmd! BufWritePost .vimrc source % | echom "Reloaded " . .vimrc | redraw
-augroup END
 " }}}
 
 " syntax {{{
 syntax on
 filetype indent on
 
+set nohls
+
 let &t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-set hls!
 " set NoMatchParen
 
 setlocal foldmethod=expr
@@ -46,6 +53,18 @@ set ts=2 sw=2
 set softtabstop=0
 set smartindent
 set noexpandtab
+
+function! InsertIndent()
+	if len(getline('.')) == 0
+		return '"_cc'
+	else
+		return 'i'
+	endif
+endfunction
+
+nnoremap <expr> i InsertIndent()
+
+set wrap!
 " }}}
 
 " search {{{
@@ -59,18 +78,17 @@ let mapleader=","
 nnoremap <Leader>h :bprev<CR>
 nnoremap <Leader>l :bnext<CR>
 
-nnoremap <Leader>b 2o<Esc>i
-nnoremap <Leader>B O<Esc>O<Esc>i
-nnoremap <Leader>u o<Esc>O<Esc>i
-nnoremap <Leader>U O<Esc>o<Esc>i
-nnoremap <Leader>U O<Esc>o<Esc>i
+nnoremap <Leader>b o<Esc>o<Esc>S
+nnoremap <Leader>B O<Esc>O<Esc>S
+nnoremap <Leader>u o<Esc>O<Esc>S
+nnoremap <Leader>U O<Esc>o<Esc>S
 
-nnoremap <Leader>j :join
-" }}}
+nnoremap  <Leader>j :join<CR>
 
 nnoremap <Leader>= K=J''
 
 nnoremap <Leader>w :set wrap!
+" }}}
 
 noremap r <C-r>
 
@@ -103,9 +121,9 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 noremap <silent> <C-F> :NERDTreeToggle<CR>
 
-cnoreabbr nt NERDTree
-cnoreabbr rc e ~/.vimrc
-cnoreabbr td sp ~/Dropbox/note/todo.txt
+command Nt NERDTree
+command Rc sp ~/.vimrc
+command Td sp ~/Dropbox/note/todo.txt
 " }}}
 
 " macro {{{
@@ -133,6 +151,19 @@ let g:python_host_prog='/usr/bin/python'
 let g:user_emmet_expandabbr_key='<Tab>'
 " }}}
 
+" textobj-user {{{
+call textobj#user#plugin('css-val', {
+\   'include-unit': {
+\     'pattern': ':\s\zs.*\ze;',
+\     'select': ['av'],
+\   },
+\   'disclude-unit': {
+\     'pattern': ':\s\zs.*\ze\(em\|ex\|%\|px\|cm\|mm\|in\|pt\|pc\|ch\|rem\|vh\|vw\|vmin\|vmax\|cm\|mm\|in\|px *\|pt\|pc\);',
+\     'select': ['iv'],
+\   },
+\ })
+" }}}
+
 " augroup line_return
 " au!
 " au BufReadPost *
@@ -154,6 +185,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'kana/vim-textobj-user'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'flazz/vim-colorschemes'
