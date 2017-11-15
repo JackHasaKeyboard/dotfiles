@@ -2,7 +2,7 @@ trap "source ~/.zshrc" USR1 # source whenever zsh receives a USR1 signal
 
 # oh-my-zsh default {{{
 export UPDATE_ZSH_DAYS=7
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -86,99 +86,96 @@ rm **/*.erb
 
 alias mk-env="
 git clone -C ~/ https://github.com/jackhasakeyboard/dotfiles
-
 for f ('zshrc' 'tmux.conf' 'gitconfig' 'vimrc' 'nvimrc'); do ln -s ~/dotfiles/.$f/.$f ~/.$f; done
 # }}}
-
 # zsh {{{
 # }}}
-
 # tmux {{{
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # }}}
-
 # vim {{{
 # }}}
-
 # }}}
-
 # todo curl install neovim {{{
 # }}}
-
 # curl install xdotool {{{
 "
 
+alias sess="
+tmuxinator
+"
+
 function cmd() {
-	google-chrome cmd.jackhasakeyboard.co/"$1"
+google-chrome cmd.jackhasakeyboard.co/"$1"
 }
 
 # breadcrumb trail
 function ..() {
-	for i in `seq "$1"`; do cd ..; done
+for i in `seq "$1"`; do cd ..; done
 }
 
 function con-do {
-	if [ "$1" = "cmd" ]; then
-		addr = "159.203.184.27"
-	elif [ "$1" = "myde" ]; then
-		addr = "192.81.211.248"
-	elif [ "$1" = "jhak" ]; then
-		addr = "192.81.211.248"
-	fi
+if [ "$1" = "cmd" ]; then
+	addr = "159.203.184.27"
+elif [ "$1" = "myde" ]; then
+	addr = "192.81.211.248"
+elif [ "$1" = "jhak" ]; then
+	addr = "192.81.211.248"
+fi
 
-	ssh root@addr
+ssh root@addr
 }
 
 function mk-remote() {
-	curl -u 'jackhasakeyboard' https://api.github.com/user/repos -d '{"name": "'$1'"}'
+curl -u 'jackhasakeyboard' https://api.github.com/user/repos -d '{"name": "'$1'"}'
 }
 
 function note() {
-	if [ "$1" != "" ]; then
-		vim ~/Dropbox/note/"$1".txt
-	else
-		vim ~/Dropbox/note/
-	fi
+if [ "$1" != "" ]; then
+	vim ~/Dropbox/note/"$1".txt
+else
+	vim ~/Dropbox/note/
+fi
 }
 
 function url {
-	if [ "$1" =~ "." ]; then
-		google-chrome "$1"
-	else
-		google-chrome "$1".com
-	fi
+if [ "$1" =~ "." ]; then
+	google-chrome "$1"
+else
+	google-chrome "$1".com
+fi
 }
 
 function cmd() {
-	google-chrome "cmd.jackhasakeyboard.co/$1"
+google-chrome "cmd.jackhasakeyboard.co/$1"
 }
 
 function ror-temp() {
-	git -C ~/ror/ clone https://github.com/jackhasakeyboard/ror-template "$1"
+git -C ~/ror/ clone https://github.com/jackhasakeyboard/ror-template "$1"
 }
 
 function temp() {
-	git clone -C ~/"$1"/ https://github.com/jackhasakeyboard/"$1"-template
+git clone -C ~/"$1"/ https://github.com/jackhasakeyboard/"$1"-template
 }
 
 function add-gem() {
-	echo "gem '$1'" >> Gemfile
+echo "gem '$1'" >> Gemfile
 }
 
 function clone-github() {
-	git clone https://github.com/"$1"
+git clone https://github.com/"$1"
 }
 # }}}
 
 # quick access {{{
 function rc() {
-	if [ "$1" = "" ]; then
-		vim ~/dotfiles
-	elif [ "$1" = "tmux" ]; then
-		vim ~/.tmux.conf
-	else
-		vim ~/."$1"rc
-	fi
+if [ "$1" = "" ]; then
+	vim ~/dotfiles
+elif [ "$1" = "tmux" ]; then
+	vim ~/.tmux.conf
+else
+	vim ~/."$1"rc
+fi
 }
 # }}}
 
