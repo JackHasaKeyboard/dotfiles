@@ -31,7 +31,7 @@ setopt NO_BEEP
 # }}}
 
 # syntax {{{
-export TERM=screen-256color
+export TERM=xterm-256color
 # }}}
 
 # history {{{
