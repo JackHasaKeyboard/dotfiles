@@ -143,27 +143,6 @@ command Td sp ~/Dropbox/note/todo.txt
 " nnoremap <leader>I :call IndentGuides()<cr>
 " }}}
 
-" you-complete-me {{{
-let g:python_host_prog='/usr/bin/python'
-" }}}
-
-" emmet {{{
-let g:user_emmet_expandabbr_key='<Tab>'
-" }}}
-
-" textobj-user {{{
-call textobj#user#plugin('css-val', {
-\   'include-unit': {
-\     'pattern': ':\s\zs.*\ze;',
-\     'select': ['av'],
-\   },
-\   'disclude-unit': {
-\     'pattern': ':\s\zs.*\ze\(em\|ex\|%\|px\|cm\|mm\|in\|pt\|pc\|ch\|rem\|vh\|vw\|vmin\|vmax\|cm\|mm\|in\|px *\|pt\|pc\);',
-\     'select': ['iv'],
-\   },
-\ })
-" }}}
-
 " augroup line_return
 " au!
 " au BufReadPost *
@@ -245,6 +224,26 @@ let g:ctrlp_working_path_mode='0'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " }}}
 
+" textobj-user {{{
+call textobj#user#plugin('prop', {
+\   'attr': {
+\     'pattern': '\s\zs.*\ze:',
+\     'select': ['cp'],
+\   },
+\ })
+
+call textobj#user#plugin('val', {
+\   'include-unit': {
+\     'pattern': ':\s\zs.*\ze;',
+\     'select': ['acv'],
+\   },
+\   'disclude-unit': {
+\     'pattern': ':\s\zs.*\ze\(em\|ex\|%\|px\|cm\|mm\|in\|pt\|pc\|ch\|rem\|vh\|vw\|vmin\|vmax\|cm\|mm\|in\|px *\|pt\|pc\);',
+\     'select': ['icv'],
+\   },
+\ })
+" }}}
+
 " vim-table-mode {{{
 let g:table_mode_corner="|"
 " }}}
@@ -286,4 +285,12 @@ endif
 " session {{{
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
+" }}}
+"
+" you-complete-me {{{
+let g:python_host_prog='/usr/bin/python'
+" }}}
+
+" emmet {{{
+let g:user_emmet_expandabbr_key='<Tab>'
 " }}}
