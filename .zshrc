@@ -61,7 +61,7 @@ alias vim="nvim -u ~/.nvimrc"
 
 alias tmux="tmux -2"
 
-alias td="vim ~/Dropbox/note/todo.txt"
+alias td="vim ~/Dropbox/note/todo.org"
 
 alias restart-pg="sudo pg_ctlcluster 9.5 main restart"
 
@@ -132,7 +132,7 @@ curl -u 'jackhasakeyboard' https://api.github.com/user/repos -d '{"name": "'$1'"
 
 function note() {
 if [ "$1" != "" ]; then
-	vim ~/Dropbox/note/"$1".txt
+	vim ~/Dropbox/note/"$1".org
 else
 	vim ~/Dropbox/note/
 fi
