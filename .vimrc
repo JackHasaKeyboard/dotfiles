@@ -1,5 +1,5 @@
 augroup vimrc
-	autocmd! BufWritePost .vimrc source % | echom "Reloaded " . .vimrc | redraw
+	autocmd! BufWritePost .vimrc source % | echom 'Reloaded ' . .vimrc | redraw
 augroup END
 
 " dir {{{
@@ -30,7 +30,7 @@ set directory=~/.vim/swp//
 " buffer {{{
 set lazyredraw
 
-au VimResized * exe "normal! \<C-W>="
+au VimResized * exe 'normal! \<C-W>='
 " autocmd BufWritePre *.haml, *.js, *.scss :silent !chrome window.location.reload()
 " }}}
 
@@ -74,7 +74,7 @@ set is ic scs
 
 " remap {{{
 " leader {{{
-let mapleader=","
+let mapleader=','
 
 nnoremap <Leader>h :bprev<CR>
 nnoremap <Leader>l :bnext<CR>
@@ -147,8 +147,8 @@ command Td sp ~/Dropbox/note/todo.txt
 " augroup line_return
 " au!
 " au BufReadPost *
-" \ if line("'\"") > 0 && line("'\"") <= line("$") |
-" \			execute 'normal! g`"zvzz' |
+" \ if line('"') > 0 && line('"') <= line('$') |
+" \			execute 'normal! g`'zvzz' |
 " \ endif
 " augroup END
 
@@ -211,7 +211,7 @@ set bg=light
 
 " nerdtree {{{
 autocmd VimEnter * NERDTree
-execute "normal \<C-w>\<C-w>"
+execute 'normal \<C-w>\<C-w>'
 autocmd VimEnter * wincmd w
 
 let NERDTreeShowHidden=1
@@ -222,7 +222,7 @@ let g:ctrlp_working_path_mode='0'
 " }}}
 
 " emmet {{{
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 " }}}
 
 " textobj-user {{{
@@ -246,18 +246,18 @@ call textobj#user#plugin('val', {
 " }}}
 
 " vim-table-mode {{{
-let g:table_mode_corner="|"
+let g:table_mode_corner='|'
 " }}}
 
 " tmux {{{
 if exists('$TMUX')
-	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+	let &t_SI = '\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\'
+	let &t_EI = '\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\'
 else
-	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+	let &t_SI = '\<Esc>]50;CursorShape=1\x7'
+	let &t_EI = '\<Esc>]50;CursorShape=0\x7'
 endif
-" }}}
+' }}}
 
 " airline {{{
 let g:airline#extensions#tabline#enabled = 1
