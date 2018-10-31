@@ -1,5 +1,5 @@
 augroup vimrc
-	autocmd! BufWritePost .vimrc source % | echom 'Reloaded ' . .vimrc | redraw
+	autocmd! BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
 augroup END
 
 " dir {{{
