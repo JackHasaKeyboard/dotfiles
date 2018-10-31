@@ -10,7 +10,7 @@ autocmd VimEnter * wincmd p
 set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep
 set wildignore+=**/tmp/**,/vendor/**
 
-let g:ctrlp_custom_ignore = {
+let g:ctrlp_custom_ignore={
 			\ 'dir':  'tmp$\|vendor$\|node_modules$',
 			\ 'file': '\.(swp$\|\lock$\|\gz$\|\DS_Store\|keep)$'
 			\ }
@@ -130,13 +130,13 @@ command Td sp ~/Dropbox/note/todo.txt
 " macro {{{
 " }}}
 
-" let g:indentguides_state = 0
+" let g:indentguides_state=0
 " function! IndentGuides()
 " 	if g:indentguides_state
-" 		let g:indentguides_state = 0
+" 		let g:indentguides_state=0
 " 		2match None
 " 	else
-" 		let g:indentguides_state = 1
+" 		let g:indentguides_state=1
 " 		execute '2match IndentGuides /\%(\_^\s*\)\@<=\%(\%'.(0*&sw+1).'v\|\%'.(1*&sw+1).'v\|\%'.(2*&sw+1).'v\|\%'.(3*&sw+1).'v\|\%'.(4*&sw+1).'v\|\%'.(5*&sw+1).'v\|\%'.(6*&sw+1).'v\|\%'.(7*&sw+1).'v\)\s/'
 " 	endif
 " endfunction
@@ -251,41 +251,41 @@ let g:table_mode_corner='|'
 
 " tmux {{{
 if exists('$TMUX')
-	let &t_SI = '\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\'
-	let &t_EI = '\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\'
+	let &t_SI='\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\'
+	let &t_EI='\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\'
 else
-	let &t_SI = '\<Esc>]50;CursorShape=1\x7'
-	let &t_EI = '\<Esc>]50;CursorShape=0\x7'
+	let &t_SI='\<Esc>]50;CursorShape=1\x7'
+	let &t_EI='\<Esc>]50;CursorShape=0\x7'
 endif
 ' }}}
 
 " airline {{{
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemod=':t'
 
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+	let g:airline_symbols={}
 endif
 
-" let g:airline_left_sep = '»'
-" let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '«'
-" let g:airline_right_sep = '◀'
-" let g:airline_symbols.linenr = '␊'
-" let g:airline_symbols.linenr = '␤'
-" let g:airline_symbols.linenr = '¶'
-" let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.paste = 'Þ'
-" let g:airline_symbols.paste = '∥'
-" let g:airline_symbols.whitespace = 'Ξ'
+" let g:airline_left_sep='»'
+" let g:airline_left_sep='▶'
+" let g:airline_right_sep='«'
+" let g:airline_right_sep='◀'
+" let g:airline_symbols.linenr='␊'
+" let g:airline_symbols.linenr='␤'
+" let g:airline_symbols.linenr='¶'
+" let g:airline_symbols.branch='⎇'
+" let g:airline_symbols.paste='ρ'
+" let g:airline_symbols.paste='Þ'
+" let g:airline_symbols.paste='∥'
+" let g:airline_symbols.whitespace='Ξ'
 " }}}
 
 " session {{{
-let g:session_autoload = 'no'
-let g:session_autosave = 'no'
+let g:session_autoload='no'
+let g:session_autosave='no'
 " }}}
 "
 " you-complete-me {{{
