@@ -10,10 +10,6 @@ autocmd VimEnter * wincmd p
 set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep
 set wildignore+=**/tmp/**,/vendor/**
 
-set undodir=~/.vim/undo//
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
-
 let g:ctrlp_custom_ignore = {
 			\ 'dir':  'tmp$\|vendor$\|node_modules$',
 			\ 'file': '\.(swp$\|\lock$\|\gz$\|\DS_Store\|keep)$'
@@ -21,9 +17,14 @@ let g:ctrlp_custom_ignore = {
 
 set nobackup
 set nowritebackup
-" set undofile
-" set undolevels=1000
-" set undoreload=10000
+
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+set undodir=~/.vim/undo//
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
 " }}}
 
 " buffer {{{
