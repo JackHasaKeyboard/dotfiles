@@ -1,0 +1,10 @@
+name: e
+root: ~/e
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - editor: vim
+
+  - cmd:
+    -
