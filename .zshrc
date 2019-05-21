@@ -28,6 +28,8 @@ fi
 export PS1="%d%% "
 
 setopt NO_BEEP
+
+set -o vi
 # }}}
 
 # syntax {{{
