@@ -1,0 +1,10 @@
+! window
+URxvt.scrollBar: false 
+
+! font
+URxvt.font: xft:monospace:size=12
+
+! color
+*.foreground: #ffffff
+*.background: #0c0c0c
+*.cursorColor: #ffffff
