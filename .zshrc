@@ -204,3 +204,7 @@ source $HOME/.zshenv
 
 source ~/.bin/tmuxinator.zsh
 # }}}
+
+# plugin {{{
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# }}}
