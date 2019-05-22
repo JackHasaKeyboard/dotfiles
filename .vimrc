@@ -163,8 +163,8 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 noremap <silent> <C-F> :NERDTreeToggle<CR>
 
-command Nt NERDTree
-command Rc sp ~/.vimrc
+command! Nt NERDTree
+command! Rc sp ~/.vimrc
 " }}}
 
 " macro {{{
