@@ -231,6 +231,7 @@ Plug 'tpope/vim-repeat'
 Plug 'gioele/vim-autoswap'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
 Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
