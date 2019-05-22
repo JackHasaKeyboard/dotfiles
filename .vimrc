@@ -165,7 +165,6 @@ noremap <silent> <C-F> :NERDTreeToggle<CR>
 
 command Nt NERDTree
 command Rc sp ~/.vimrc
-command Td sp ~/Dropbox/note/todo.txt
 " }}}
 
 " macro {{{
