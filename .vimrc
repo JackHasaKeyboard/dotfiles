@@ -130,6 +130,8 @@ nnoremap  <Leader>j :join<CR>
 nnoremap <Leader>= K=J''
 
 nnoremap <Leader>w :set wrap!
+
+nnoremap <Leader>t :TableModeToggle
 " }}}
 
 noremap r <C-r>
