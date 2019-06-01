@@ -54,8 +54,6 @@ augroup END
 
 let &cpo=s:save_cpo
 
-" vim:set ft=vim sw=2 sts=2 et:
-
 set nobackup
 set nowritebackup
 
@@ -84,7 +82,6 @@ set nohls
 let &t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-" set NoMatchParen
 
 setlocal foldmethod=expr
 
