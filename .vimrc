@@ -124,6 +124,8 @@ nnoremap <Leader>U O<Esc>o<Esc>S
 
 nnoremap  <Leader>j :join<CR>
 
+nnoremap <Leader>v :ArgWrap<CR>
+
 nnoremap <Leader>= K=J''
 
 nnoremap <Leader>w :set wrap!
@@ -232,6 +234,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'FooSoft/vim-argwrap'
 
 call plug#end()
 " }}}
