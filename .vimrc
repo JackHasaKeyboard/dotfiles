@@ -257,10 +257,6 @@ let NERDTreeShowHidden=1
 let g:ctrlp_working_path_mode='0'
 " }}}
 
-" emmet {{{
-imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
-" }}}
-
 " textobj-user {{{
 call textobj#user#plugin('prop', {
 \   'attr': {
@@ -313,11 +309,12 @@ endif
 let g:session_autoload='no'
 let g:session_autosave='no'
 " }}}
-"
+
 " you-complete-me {{{
 let g:python_host_prog='/usr/bin/python'
 " }}}
 
 " emmet {{{
-let g:user_emmet_expandabbr_key='<Tab>'
+let g:user_emmet_install_global=0
+autocmd FileType htmlEmmetInstall
 " }}}
