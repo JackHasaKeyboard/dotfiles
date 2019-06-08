@@ -1,11 +1,14 @@
-name: meteor
+name: mtr
 
 tmux_options: -f ~/.tmux.conf
 
 windows:
-  - editor: vim
+    - editor: vim
 
-  - cmd:
-    -
+    - cmd:
+        -
 
-  - server: meteor
+    - server:
+        panes:
+            - meteor
+            -
