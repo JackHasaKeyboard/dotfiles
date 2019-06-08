@@ -1,0 +1,14 @@
+name: expo
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - editor: vim
+
+  - cmd:
+      -
+
+  - server:
+      panes:
+          - npm start
+          -
