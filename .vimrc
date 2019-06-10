@@ -128,7 +128,7 @@ nnoremap <Leader>v :ArgWrap<CR>
 
 nnoremap <Leader>= K=J''
 
-nnoremap <Leader>w :set wrap!
+nnoremap <Leader>w :set wrap!<CR>
 
 nnoremap <Leader>t :TableModeToggle
 " }}}
