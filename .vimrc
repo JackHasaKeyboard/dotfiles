@@ -7,7 +7,7 @@ autocmd VimEnter * wincmd p
 " }}}
 
 " file {{{
-set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep
+set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep,*.git
 set wildignore+=**/tmp/**,/vendor/**
 
 let g:ctrlp_custom_ignore={
@@ -254,6 +254,7 @@ let NERDTreeShowHidden=1
 
 " ctrl-p {{{
 let g:ctrlp_working_path_mode='0'
+let g:ctrlp_show_hidden = 1
 " }}}
 
 " textobj-user {{{
