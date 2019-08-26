@@ -187,7 +187,7 @@ ZSH_THEME="agnoster"
 plugins=(
 git
 rails
-colored-man
+colored-man-pages
 colorize
 github
 jira
