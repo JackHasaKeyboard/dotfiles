@@ -57,6 +57,8 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # }}}
 
 # alias, function {{{
+alias sudo='nocorrect sudo '
+
 alias add-jquery="curl -O https://code.jquery.com/jquery-3.1.0.min.js"
 
 alias vim="nvim -u ~/.nvimrc"
