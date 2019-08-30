@@ -198,6 +198,11 @@ command! Rc sp ~/.vimrc
 " autocmd BufWritePre * set noet|retab!
 " autocmd BufWritePre * %s/\s\+$//
 
+" bell {{{
+set vb
+set t_vb=
+" }}}
+
 " vim-plug {{{
 if empty(glob('~/.nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs
