@@ -86,6 +86,10 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 setlocal foldmethod=expr
 
 " line {{{
+set guicursor+=i:block-Cursor
+" }}}
+
+" line {{{
 set nu
 
 set ts=2 sw=2
