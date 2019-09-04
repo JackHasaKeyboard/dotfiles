@@ -137,6 +137,8 @@ nnoremap <Leader>= K=J''
 nnoremap <Leader>w :set wrap!<CR>
 
 nnoremap <Leader>t :TableModeToggle
+
+nnoremap <Leader>L call setline('.', getline('.') . ';')
 " }}}
 
 noremap r <C-r>
