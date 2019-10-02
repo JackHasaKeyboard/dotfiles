@@ -339,5 +339,8 @@ let g:python_host_prog='/usr/bin/python'
 
 " emmet {{{
 let g:user_emmet_install_global=0
-autocmd FileType htmlEmmetInstall
+autocmd FileType html EmmetInstall
+
+let g:user_emmet_mode='a'
+let g:user_emmet_expandabbr_key='<Tab>'
 " }}}
