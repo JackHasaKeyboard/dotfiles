@@ -152,3 +152,102 @@ Plug 'mattn/webapi-vim'
 
 call plug#end()
 " }}}
+
+" nerdtree {{{
+autocmd VimEnter * NERDTree
+execute 'normal \<C-w>\<C-w>'
+autocmd VimEnter * wincmd w
+
+let NERDTreeShowHidden=1
+" }}}
+
+" ctrl-p {{{
+let g:ctrlp_working_path_mode='0'
+let g:ctrlp_show_hidden = 1
+" }}}
+
+" textobj-user {{{
+call textobj#user#plugin('prop', {
+\   'attr': {
+\     'pattern': '\s\zs.*\ze:',
+\     'select': ['cp'],
+\   },
+\ })
+
+call textobj#user#plugin('val', {
+\   'include-unit': {
+\     'pattern': ':\s\zs.*\ze;',
+\     'select': ['acv'],
+\   },
+\   'disclude-unit': {
+\     'pattern': ':\s\zs.*\ze\(em\|ex\|%\|px\|cm\|mm\|in\|pt\|pc\|ch\|rem\|vh\|vw\|vmin\|vmax\|cm\|mm\|in\|px *\|pt\|pc\);',
+\     'select': ['icv'],
+\   },
+\ })
+
+call textobj#user#plugin('arg', {
+\   'in': {
+\     'pattern': '(*), ',
+\     'select': ['ia'],
+\   },
+\   'around': {
+\     'pattern': '*, ',
+\     'select': ['aa'],
+\   }
+\ })
+" }}}
+
+" vim-table-mode {{{
+let g:table_mode_corner='|'
+" }}}
+
+" airline {{{
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemod=':t'
+
+let g:airline_powerline_fonts=1
+
+if !exists('g:airline_symbols')
+	let g:airline_symbols={}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+" }}}
+
+" session {{{
+let g:session_autoload='no'
+let g:session_autosave='no'
+" }}}
+
+" you-complete-me {{{
+let g:python_host_prog='/usr/bin/python'
+" }}}
+
+" emmet {{{
+let g:user_emmet_install_global=0
+autocmd FileType html EmmetInstall
+
+let g:user_emmet_mode='a'
+let g:user_emmet_expandabbr_key='<Tab>'
+" }}}
