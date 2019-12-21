@@ -9,6 +9,8 @@ export LANG=en_US.UTF-8
 
 export ZSH=~/.oh-my-zsh
 
+ZSH_THEME="agnoster"
+
 source $ZSH/oh-my-zsh.sh
 
 HYPHEN_INSENSITIVE="true"
@@ -37,15 +39,15 @@ export TERM=xterm-256color
 # }}}
 
 # history {{{
-export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
-export HISTSIZE=10000
-export HISTFILE=~/.zsh_history
-export SAVEHIST=10000
-setopt INC_APPEND_HISTORY
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
+# export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+# export HISTSIZE=10000
+# export HISTFILE=~/.zsh_history
+# export SAVEHIST=10000
+# setopt INC_APPEND_HISTORY
+# setopt HIST_IGNORE_ALL_DUPS
+# setopt HIST_IGNORE_SPACE
+# setopt HIST_REDUCE_BLANKS
+# setopt HIST_VERIFY
 # }}}
 
 # compilation flags {{{
@@ -134,11 +136,23 @@ function mk-remote() {
 curl -u 'jackhasakeyboard' https://api.github.com/user/repos -d '{"name": "'$1'"}'
 }
 
+function mk-remote-scrap() {
+curl -u 'jack-scrap' https://api.github.com/user/repos -d '{"name": "'$1'"}'
+}
+
 function note() {
 if [ "$1" != "" ]; then
 	vim ~/Dropbox/note/"$1".org
 else
 	vim ~/Dropbox/note/
+fi
+}
+
+function ref() {
+if [ "$1" != "" ]; then
+	vim ~/Dropbox/ref/"$1".org
+else
+	vim ~/Dropbox/ref/
 fi
 }
 
@@ -184,8 +198,6 @@ fi
 # }}}
 
 # personal settings {{{
-ZSH_THEME="agnoster"
-
 plugins=(
 git
 rails
