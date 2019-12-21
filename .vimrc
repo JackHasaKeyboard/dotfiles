@@ -64,3 +64,15 @@ set directory=~/.vim/swp//
 " buffer {{{
 set lazyredraw
 " }}}
+
+" syntax {{{
+syntax on
+filetype indent on
+
+set nohls
+
+set t_Co=256
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+setlocal foldmethod=expr
+" }}}
