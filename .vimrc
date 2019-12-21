@@ -105,6 +105,10 @@ set nohls
 set t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+let g:solarized_termcolors=256
+
+set bg=dark
+
 setlocal foldmethod=expr
 " }}}
 
@@ -250,4 +254,8 @@ autocmd FileType html EmmetInstall
 
 let g:user_emmet_mode='a'
 let g:user_emmet_expandabbr_key='<Tab>'
+" }}}
+
+" vim-colors {{{
+colo solarized
 " }}}
