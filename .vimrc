@@ -107,3 +107,48 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 setlocal foldmethod=expr
 " }}}
+
+" search {{{
+set is ic scs
+" }}}
+
+" vim-plug {{{
+if empty(glob('~/.nvim/autoload/plug.vim'))
+	silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'kana/vim-textobj-user'
+Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tmhedberg/matchit'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'xolox/vim-session'
+Plug 'mattn/emmet-vim'
+Plug 'sjl/gundo.vim'
+Plug 'vim-scripts/L9'
+Plug 'danro/rename.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'xolox/vim-misc'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'gioele/vim-autoswap'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'FooSoft/vim-argwrap'
+Plug 'mattn/webapi-vim'
+
+call plug#end()
+" }}}
