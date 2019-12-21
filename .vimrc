@@ -65,6 +65,32 @@ set directory=~/.vim/swp//
 set lazyredraw
 " }}}
 
+" line {{{
+set guicursor+=i:block-Cursor
+
+set nu
+
+set ts=2 sw=2
+set softtabstop=0
+set smartindent
+set noexpandtab
+
+function! InsertIndent()
+	if len(getline('.')) == 0
+		return '"_cc'
+	else
+		return 'i'
+	endif
+endfunction
+
+nnoremap <expr> i InsertIndent()
+
+set wrap!
+set textwidth=0
+set wrapmargin=0
+set formatoptions-=t
+" }}}
+
 " syntax {{{
 syntax on
 filetype indent on
