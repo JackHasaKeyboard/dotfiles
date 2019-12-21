@@ -5,6 +5,11 @@ noremap r <C-r>
 
 noremap ; :
 
+noremap H ^
+noremap L $
+noremap K gg
+noremap J G
+
 nnoremap <C-c> "+y
 nnoremap <C-S-c> "+y
 
