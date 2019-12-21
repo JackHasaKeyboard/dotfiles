@@ -91,6 +91,11 @@ set wrapmargin=0
 set formatoptions-=t
 " }}}
 
+" bell {{{
+set vb
+set t_vb=
+" }}}
+
 " syntax {{{
 syntax on
 filetype indent on
