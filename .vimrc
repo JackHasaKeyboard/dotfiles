@@ -105,16 +105,17 @@ set t_vb=
 syntax on
 filetype indent on
 
+setlocal foldmethod=expr
+
 set nohls
 
 set t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+colo solarized
 let g:solarized_termcolors=256
 
 set bg=dark
-
-setlocal foldmethod=expr
 " }}}
 
 " search {{{
@@ -131,7 +132,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'kana/vim-textobj-user'
-Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tmhedberg/matchit'
 Plug 'scrooloose/nerdtree'
@@ -259,8 +259,4 @@ autocmd FileType html EmmetInstall
 
 let g:user_emmet_mode='a'
 let g:user_emmet_expandabbr_key='<Tab>'
-" }}}
-
-" vim-colors {{{
-colo solarized
 " }}}
