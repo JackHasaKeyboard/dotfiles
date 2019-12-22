@@ -1,3 +1,5 @@
+(setq gnutls-algorithm-priority "NORMAL:-VERSION-TLS1.3")
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -14,7 +16,8 @@
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(custom-enabled-themes (quote (whiteboard)))
- '(org-agenda-files (quote ("~/Dropbox/note/eg.org"))))
+ '(org-agenda-files (quote ("~/Dropbox/note/eg.org")))
+ '(package-selected-packages (quote (##))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -22,9 +25,5 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") 
-
-(add-to-list 'load-path "~/.emacs.d")
-
-(load-theme 'solarized t)
+;; bell
+(setq visible-bell t)
