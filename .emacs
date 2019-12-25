@@ -28,6 +28,9 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; line
+(global-linum-mode)
+
 ;; syntax
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'zenburn)
