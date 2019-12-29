@@ -20,7 +20,8 @@
    (quote
     ("e8b353658a70b481107c9f51ae20a115b6a23dcb22a6daa15b99ddc552726561" default)))
  '(org-agenda-files (quote ("~/Dropbox/note/eg.org")))
- '(package-selected-packages (quote (##))))
+ '(package-selected-packages (quote (slime ##))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -37,3 +38,6 @@
 
 ;; bell
 (setq visible-bell t)
+
+;; SLIME
+(setq inferior-lisp-program "/usr/bin/clisp")
