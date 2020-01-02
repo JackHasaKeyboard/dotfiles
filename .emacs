@@ -29,6 +29,12 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; window
+(global-set-key (kbd "S-<left>") 'windmove-left)
+(global-set-key (kbd "S-<right>") 'windmove-right)
+(global-set-key (kbd "S-<up>") 'windmove-up)
+(global-set-key (kbd "S-<down>") 'windmove-down)
+
 ;; line
 (global-linum-mode)
 
