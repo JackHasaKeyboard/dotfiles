@@ -70,6 +70,11 @@ set directory=~/.vim/swp//
 set lazyredraw
 " }}}
 
+" tab {{{
+nnoremap <C-S-h> :tabprev<CR>
+nnoremap <C-S-l> :tabnext<CR>
+" }}}
+
 " line {{{
 set guicursor+=i:block-Cursor
 
