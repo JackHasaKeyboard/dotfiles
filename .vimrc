@@ -1,145 +1,5 @@
-augroup vimrc
-	autocmd! BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
-augroup END
-
-" dir {{{
-autocmd VimEnter * wincmd p
-" }}}
-
-" file {{{
-set wildignore=*.swp,*.lock,*.gz,*.DS_Store,*.keep,*.git
-set wildignore+=**/tmp/**,/vendor/**
-
-let g:ctrlp_custom_ignore={
-			\ 'dir':  'tmp$\|vendor$\|node_modules$',
-			\ 'file': '\.(swp$\|\lock$\|\gz$\|\DS_Store\|keep)$'
-			\ }
-
-if exists("g:loaded_gitignore_wildignore")
-  finish
-endif
-let g:loaded_gitignore_wildignore=1
-
-let s:save_cpo=&cpo
-set cpo&vim
-
-function s:WildignoreFromGitignore(...)
-  let gitignore=(a:0 && !empty(a:1)) ? fnamemodify(a:1, ':p') : fnamemodify(expand('%'), ':p:h') . '/'
-  let gitignore.='.gitignore'
-  if filereadable(gitignore)
-    let igstring=''
-    for oline in readfile(gitignore)
-      let line=substitute(oline, '\s|\n|\r', '', "g")
-	  let line=substitute(line, ',', '\\\\,', "g")
-      if line =~ '^#' | con | endif
-      if line == ''   | con | endif
-      if line =~ '^!' | con | endif
-      if line =~ '/$' | let igstring .= "," . line . "*" | con | endif
-      let igstring .= "," . substitute(line, ' ', '\\ ', "g")
-    endfor
-    let execstring="set wildignore+=".substitute(igstring, '^,', '', "g")
-    execute execstring
-  endif
-endfunction
-
-noremap <unique> <script> <Plug>WildignoreFromGitignore <SID>WildignoreFromGitignore
-noremap <SID>WildignoreFromGitignore :call <SID>WildignoreFromGitignore()<CR>
-
-command -nargs=? WildignoreFromGitignore :call <SID>WildignoreFromGitignore(<q-args>)
-
-augroup wildignorefromgitignore_fugitive
-    autocmd!
-    autocmd User Fugitive if exists('b:git_dir') | call <SID>WildignoreFromGitignore(fnamemodify(b:git_dir, ':h')) | endif
-augroup END
-
-let &cpo=s:save_cpo
-
-set nobackup
-set nowritebackup
-
-set undofile
-set undolevels=1000
-set undoreload=10000
-
-set undodir=~/.vim/undo//
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
-" }}}
-
-" buffer {{{
-set lazyredraw
-
-au VimResized * exe 'normal! \<C-W>='
-" autocmd BufWritePre *.haml, *.js, *.scss :silent !chrome window.location.reload()
-" }}}
-
-" syntax {{{
-syntax on
-filetype indent on
-
-set nohls
-
-let &t_Co=256
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-
-setlocal foldmethod=expr
-
-" line {{{
-set guicursor+=i:block-Cursor
-" }}}
-
-" line {{{
-set nu
-
-set ts=2 sw=2
-set softtabstop=0
-set smartindent
-set noexpandtab
-
-function! InsertIndent()
-	if len(getline('.')) == 0
-		return '"_cc'
-	else
-		return 'i'
-	endif
-endfunction
-
-nnoremap <expr> i InsertIndent()
-
-set textwidth=0
-set wrapmargin=0
-set wrap!
-" }}}
-
-" search {{{
-set is ic scs
-" }}}
-
-" remap {{{
-" leader {{{
-let mapleader=','
-
-nnoremap <Leader>h :bprev<CR>
-nnoremap <Leader>l :bnext<CR>
-
-nnoremap <Leader>b o<Esc>o<Esc>S
-nnoremap <Leader>B O<Esc>O<Esc>S
-nnoremap <Leader>u o<Esc>O<Esc>S
-nnoremap <Leader>U O<Esc>o<Esc>S
-
-nnoremap  <Leader>j :join<CR>
-
-nnoremap <Leader>v :ArgWrap<CR>
-
-nnoremap <Leader>= K=J''
-
-nnoremap <Leader>w :set wrap!<CR>
-
-nnoremap <Leader>t :TableModeToggle
-
-nnoremap <Leader>L call setline('.', getline('.') . ';')
-" }}}
+" keyboard {{{
+nnoremap ; :
 
 noremap r <C-r>
 
@@ -165,48 +25,106 @@ nnoremap <c-o> <c-o>zz
 nnoremap vv ^vg_
 nnoremap gV `[V`]
 
-nnoremap <C-c> "+y
-
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-noremap <silent> <C-F> :NERDTreeToggle<CR>
+noremap <silent> <C-f> :NERDTreeToggle<CR>
 
-command! Rc sp ~/.vimrc
+" leader {{{
+let mapleader=','
+
+nnoremap <Leader>h :bprev<CR>
+nnoremap <Leader>l :bnext<CR>
+
+nnoremap <Leader>b o<Esc>o<Esc>S
+nnoremap <Leader>B O<Esc>O<Esc>S
+nnoremap <Leader>u o<Esc>O<Esc>S
+nnoremap <Leader>U O<Esc>o<Esc>S
+
+nnoremap <Leader>j :join<CR>
+nnoremap <Leader>v :ArgWrap<CR>
+
+nnoremap <Leader>w :set wrap!<CR>
+
+nnoremap <Leader>t :TableModeToggle
+
+nnoremap <Leader>= K=J''
+nnoremap <Leader>L call setline('.', getline('.') . ';')
+" }}}
 " }}}
 
-" macro {{{
+" backup {{{
+set nobackup
+set nowritebackup
+
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+set undodir=~/.vim/undo//
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
 " }}}
 
-" let g:indentguides_state=0
-" function! IndentGuides()
-" 	if g:indentguides_state
-" 		let g:indentguides_state=0
-" 		2match None
-" 	else
-" 		let g:indentguides_state=1
-" 		execute '2match IndentGuides /\%(\_^\s*\)\@<=\%(\%'.(0*&sw+1).'v\|\%'.(1*&sw+1).'v\|\%'.(2*&sw+1).'v\|\%'.(3*&sw+1).'v\|\%'.(4*&sw+1).'v\|\%'.(5*&sw+1).'v\|\%'.(6*&sw+1).'v\|\%'.(7*&sw+1).'v\)\s/'
-" 	endif
-" endfunction
-" hi def IndentGuides guibg=#303030 ctermbg=234
-" nnoremap <leader>I :call IndentGuides()<cr>
+" buffer {{{
+set lazyredraw
 " }}}
 
-" augroup line_return
-" au!
-" au BufReadPost *
-" \ if line('"') > 0 && line('"') <= line('$') |
-" \			execute 'normal! g`'zvzz' |
-" \ endif
-" augroup END
+" tab {{{
+nnoremap <C-S-h> :tabprev<CR>
+nnoremap <C-S-l> :tabnext<CR>
+" }}}
 
-" autocmd BufWritePre * :normal K=J
-" autocmd BufWritePre * set noet|retab!
-" autocmd BufWritePre * %s/\s\+$//
+" line {{{
+set guicursor+=i:block-Cursor
+
+set nu
+
+set ts=2 sw=2
+set softtabstop=0
+set smartindent
+set noexpandtab
+
+function! InsertIndent()
+	if len(getline('.')) == 0
+		return '"_cc'
+	else
+		return 'i'
+	endif
+endfunction
+
+nnoremap <expr> i InsertIndent()
+
+set wrap!
+set textwidth=0
+set wrapmargin=0
+set formatoptions-=t
+" }}}
 
 " bell {{{
 set vb
 set t_vb=
+" }}}
+
+" syntax {{{
+syntax on
+filetype indent on
+
+setlocal foldmethod=expr
+
+set nohls
+
+set t_Co=256
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+colo solarized
+let g:solarized_termcolors=256
+
+set bg=dark
+" }}}
+
+" search {{{
+set is ic scs
 " }}}
 
 " vim-plug {{{
@@ -219,7 +137,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'kana/vim-textobj-user'
-Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tmhedberg/matchit'
 Plug 'scrooloose/nerdtree'
@@ -237,8 +154,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
-Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
 Plug 'gioele/vim-autoswap'
@@ -247,14 +162,9 @@ Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'FooSoft/vim-argwrap'
+Plug 'mattn/webapi-vim'
 
 call plug#end()
-" }}}
-
-" vim-colorschemes {{{
-colo solarized
-let g:solarized_termcolors=256
-set bg=light
 " }}}
 
 " nerdtree {{{
@@ -287,6 +197,17 @@ call textobj#user#plugin('val', {
 \     'pattern': ':\s\zs.*\ze\(em\|ex\|%\|px\|cm\|mm\|in\|pt\|pc\|ch\|rem\|vh\|vw\|vmin\|vmax\|cm\|mm\|in\|px *\|pt\|pc\);',
 \     'select': ['icv'],
 \   },
+\ })
+
+call textobj#user#plugin('arg', {
+\   'in': {
+\     'pattern': '(*), ',
+\     'select': ['ia'],
+\   },
+\   'around': {
+\     'pattern': '*, ',
+\     'select': ['aa'],
+\   }
 \ })
 " }}}
 
