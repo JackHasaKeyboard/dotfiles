@@ -34,6 +34,9 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; system
+(setq vc-follow-symlinks t)
+
 ;; window
 (global-set-key (kbd "S-<left>") 'windmove-left)
 (global-set-key (kbd "S-<right>") 'windmove-right)
