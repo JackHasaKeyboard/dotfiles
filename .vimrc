@@ -46,7 +46,7 @@ nnoremap <Leader>v :ArgWrap<CR>
 
 nnoremap <Leader>w :set wrap!<CR>
 
-nnoremap <Leader>t :TableModeToggle
+nnoremap <Leader>t :TableModeToggle<CR>
 
 nnoremap <Leader>= K=J''
 nnoremap <Leader>L call setline('.', getline('.') . ';')
