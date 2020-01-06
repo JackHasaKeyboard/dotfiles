@@ -37,6 +37,9 @@
 ;; system
 (setq vc-follow-symlinks t)
 
+;; splash
+(setq inhibit-splash-screen t)
+
 ;; window
 (global-set-key (kbd "S-<left>") 'windmove-left)
 (global-set-key (kbd "S-<right>") 'windmove-right)
