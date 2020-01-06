@@ -25,7 +25,7 @@
    (quote
     ("e8b353658a70b481107c9f51ae20a115b6a23dcb22a6daa15b99ddc552726561" default)))
  '(org-agenda-files (quote ("~/Dropbox/note/eg.org")))
- '(package-selected-packages (quote (slime ##))))
+ '(package-selected-packages (quote (evil slime ##))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -67,3 +67,7 @@
     (add-hook 'lisp-mode-hook #'enable-paredit-mode)
     (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
     (add-hook 'scheme-mode-hook #'enable-paredit-mode)
+
+;; Evil
+(require 'evil)
+(evil-mode)
