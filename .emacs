@@ -71,3 +71,6 @@
 ;; Evil
 (require 'evil)
 (evil-mode)
+
+;; Org-mode
+(setq org-src-fontify-natively t)
