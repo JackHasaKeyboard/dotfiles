@@ -175,7 +175,16 @@ let g:python_host_prog='/usr/bin/python'
 " }}}
 
 " nerdtree {{{
-autocmd VimEnter * NERDTree
+let sect = [
+			\"note",
+			\"ref"
+			\]
+let base = split(getcwd(), "/")[-1]
+
+if index(sect, base) == -1
+	autocmd VimEnter * NERDTree
+endif
+
 execute 'normal \<C-w>\<C-w>'
 autocmd VimEnter * wincmd w
 
