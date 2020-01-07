@@ -20,7 +20,7 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap g; g;zz
 nnoremap g, g,zz
-nnoremap <c-o> <c-o>zz
+nnoremap <C-o> <C-o>zz
 
 nnoremap vv ^vg_
 nnoremap gV `[V`]
