@@ -170,6 +170,10 @@ Plug 'honza/vim-snippets'
 call plug#end()
 " }}}
 
+" Python {{{
+let g:python_host_prog='/usr/bin/python'
+" }}}
+
 " nerdtree {{{
 autocmd VimEnter * NERDTree
 execute 'normal \<C-w>\<C-w>'
@@ -255,10 +259,6 @@ let g:airline_symbols.linenr = ''
 " session {{{
 let g:session_autoload='no'
 let g:session_autosave='no'
-" }}}
-
-" you-complete-me {{{
-let g:python_host_prog='/usr/bin/python'
 " }}}
 
 " emmet {{{
