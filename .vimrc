@@ -163,7 +163,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'FooSoft/vim-argwrap'
 Plug 'mattn/webapi-vim'
-Plug 'kshenoy/vim-signature' 
+Plug 'kshenoy/vim-signature'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
