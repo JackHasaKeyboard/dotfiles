@@ -37,6 +37,12 @@
 ;; system
 (setq vc-follow-symlinks t)
 
+;; backup
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;; splash
 (setq inhibit-splash-screen t)
 
