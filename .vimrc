@@ -179,7 +179,7 @@ call plug#end()
 let g:python_host_prog='/usr/bin/python'
 " }}}
 
-" nerdtree {{{
+" NERDTree {{{
 let sect = [
 			\"note",
 			\"ref"
@@ -196,7 +196,7 @@ autocmd VimEnter * wincmd w
 let NERDTreeShowHidden=1
 " }}}
 
-" ctrl-p {{{
+" ctrlp {{{
 let g:ctrlp_working_path_mode='0'
 let g:ctrlp_show_hidden=1
 " }}}
@@ -236,7 +236,7 @@ call textobj#user#plugin('arg', {
 let g:table_mode_corner='|'
 " }}}
 
-" airline {{{
+" vim-airline {{{
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 
@@ -270,12 +270,12 @@ let g:airline_symbols.readonly=''
 let g:airline_symbols.linenr=''
 " }}}
 
-" session {{{
+" vim-session {{{
 let g:session_autoload='no'
 let g:session_autosave='no'
 " }}}
 
-" emmet {{{
+" Emmet {{{
 let g:user_emmet_install_global=0
 autocmd FileType html EmmetInstall
 
