@@ -8,3 +8,7 @@ URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12.5
 *.foreground: #ffffff
 *.background: #0c0c0c
 *.cursorColor: #ffffff
+
+! mode
+URxvt.iso14755: false
+URxvt.iso14755_52: false
