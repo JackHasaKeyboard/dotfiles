@@ -126,6 +126,12 @@ set bg=dark
 set is ic scs
 " }}}
 
+" function {{{
+function! Swap(char)
+	execute '%s/\(.*\)' . a:char . '\(.*\)/\2 - \1/'
+endfunction
+" }}}
+
 " vim-plug {{{
 if empty(glob('~/.nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs
