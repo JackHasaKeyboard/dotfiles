@@ -98,7 +98,6 @@ nnoremap <expr> i InsertIndent()
 set wrap!
 set textwidth=0
 set wrapmargin=0
-set formatoptions-=t
 " }}}
 
 " bell {{{
