@@ -111,7 +111,7 @@ let c = 0
 syntax on
 filetype indent on
 
-setlocal foldmethod=expr
+setlocal foldmethod=marker
 
 set nohls
 
