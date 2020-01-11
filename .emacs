@@ -62,6 +62,9 @@
 ;; bell
 (setq visible-bell t)
 
+;; indentation
+(setq-default tab-width 2)
+
 ;; SLIME
 (setq inferior-lisp-program "/usr/bin/clisp")
 
