@@ -136,6 +136,10 @@ function! Swap(char)
 endfunction
 " }}}
 
+" session {{{
+let g:sessions_dir = '~/.vim/sessions'
+" }}}
+
 " vim-plug {{{
 if empty(glob('~/.nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs
@@ -152,7 +156,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
-Plug 'xolox/vim-session'
 Plug 'mattn/emmet-vim'
 Plug 'sjl/gundo.vim'
 Plug 'vim-scripts/L9'
@@ -272,11 +275,6 @@ let g:airline_right_alt_sep=''
 let g:airline_symbols.branch=''
 let g:airline_symbols.readonly=''
 let g:airline_symbols.linenr=''
-" }}}
-
-" vim-session {{{
-let g:session_autoload='no'
-let g:session_autosave='no'
 " }}}
 
 " Emmet {{{
