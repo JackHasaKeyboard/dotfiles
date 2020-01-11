@@ -106,6 +106,8 @@ set t_vb=
 " }}}
 
 " syntax {{{
+let c = 0
+
 syntax on
 filetype indent on
 
@@ -120,6 +122,8 @@ colo solarized
 let g:solarized_termcolors=256
 
 set bg=dark
+
+nnoremap <Leader>p :so ~/.vim/autoload/palette.vim<CR>
 " }}}
 
 " search {{{
