@@ -289,3 +289,7 @@ autocmd FileType html EmmetInstall
 let g:user_emmet_mode='a'
 let g:user_emmet_expandabbr_key='<Tab>'
 " }}}
+
+" vim-signature {{{
+abbr delm delm!<CR>:SignatureRefresh
+" }}}
