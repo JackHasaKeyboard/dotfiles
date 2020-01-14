@@ -71,8 +71,11 @@ set lazyredraw
 " }}}
 
 " tab {{{
-nnoremap <C-S-h> :tabprev<CR>
-nnoremap <C-S-l> :tabnext<CR>
+nnoremap <C-h> :tabprev<CR>
+nnoremap <C-l> :tabnext<CR>
+
+nnoremap <C-S-h> :tabfirst<CR>
+nnoremap <C-S-L> :tablast<CR>
 " }}}
 
 " line {{{
