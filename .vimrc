@@ -127,6 +127,8 @@ let g:solarized_termcolors=256
 set bg=dark
 
 nnoremap <Leader>p :so ~/.vim/autoload/palette.vim<CR>
+
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 " }}}
 
 " search {{{
