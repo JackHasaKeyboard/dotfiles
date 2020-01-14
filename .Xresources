@@ -12,6 +12,3 @@ URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12.5
 ! mode
 URxvt.iso14755: false
 URxvt.iso14755_52: false
-
-! input
-URxvt.keysym.Control-l: command:\033c
