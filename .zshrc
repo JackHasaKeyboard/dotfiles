@@ -65,7 +65,7 @@ alias vim="nvim -u ~/.nvimrc"
 
 alias tmux="tmux -2"
 
-alias td="vim ~/Dropbox/note/todo.org"
+alias td="vim ~/Dropbox/note/TODO.org"
 
 alias restart-pg="sudo pg_ctlcluster 9.5 main restart"
 
