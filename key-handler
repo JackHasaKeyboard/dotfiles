@@ -11,5 +11,7 @@ do
 			nitrogen --save --set-zoom-fill "$file" ;;
 		"C-m")
 			mv "$file" ~/Desktop/img/relic ;;
+		"C-b")
+			gsettings set org.gnome.desktop.background picture-uri file:///$file ;;
 	esac
 done
