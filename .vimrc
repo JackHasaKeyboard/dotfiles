@@ -202,7 +202,8 @@ if index(sect, base) == -1
 	autocmd VimEnter * NERDTree
 endif
 
-execute 'normal \<C-w>\<C-w>'
+" nerdtree {{{
+autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd w
 
 let NERDTreeShowHidden=1
