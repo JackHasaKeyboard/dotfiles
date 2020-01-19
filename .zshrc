@@ -220,3 +220,11 @@ source ~/.bin/tmuxinator.zsh
 # plugin {{{
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # }}}
+
+# LaTeX {{{
+alias pdflatex="pdflatex -output-directory ~/out"
+
+function vu {
+zathura ~/out/"$1".pdf
+}
+# }}}
