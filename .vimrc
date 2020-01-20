@@ -183,6 +183,7 @@ Plug 'mattn/webapi-vim'
 Plug 'kshenoy/vim-signature'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'adriaanzon/vim-emmet-ultisnips' | Plug 'SirVer/ultisnips'
 
 call plug#end()
 " }}}
