@@ -81,5 +81,7 @@
 (require 'evil)
 (evil-mode)
 
+(setq evil-insert-state-cursor '((bar)))
+
 ;; Org-mode
 (setq org-src-fontify-natively t)
