@@ -86,5 +86,10 @@
 
 (setq evil-insert-state-cursor '((bar)))
 
+(define-key evil-normal-state-map "H" 'evil-beginning-of-line)
+(define-key evil-normal-state-map "L" 'evil-end-of-line)
+(define-key evil-normal-state-map "J" 'end-of-buffer)
+(define-key evil-normal-state-map "K" 'evil-goto-first-line)
+
 ;; Org-mode
 (setq org-src-fontify-natively t)
