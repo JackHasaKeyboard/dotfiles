@@ -65,6 +65,9 @@
 ;; indentation
 (setq-default tab-width 2)
 
+;; history
+(savehist-mode)
+
 ;; SLIME
 (setq inferior-lisp-program "/usr/bin/clisp")
 
