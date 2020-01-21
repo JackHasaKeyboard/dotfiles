@@ -17,15 +17,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
+	 [default default default italic underline success warning error])
  '(ansi-color-names-vector
-   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+	 ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(custom-enabled-themes (quote (whiteboard)))
  '(custom-safe-themes
-   (quote
-    ("e8b353658a70b481107c9f51ae20a115b6a23dcb22a6daa15b99ddc552726561" default)))
+	 (quote
+		("e8b353658a70b481107c9f51ae20a115b6a23dcb22a6daa15b99ddc552726561" default)))
  '(org-agenda-files (quote ("~/Dropbox/note/eg.org")))
- '(package-selected-packages (quote (evil slime ##))))
+ '(package-selected-packages (quote (dired-du evil slime ##))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
