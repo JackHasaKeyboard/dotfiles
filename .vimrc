@@ -30,6 +30,8 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 noremap <silent> <C-f> :NERDTreeToggle<CR>
 
+nnoremap p p=`]
+
 " leader {{{
 let mapleader=','
 
