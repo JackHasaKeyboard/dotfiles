@@ -194,9 +194,9 @@ let g:python_host_prog='/usr/bin/python'
 
 " NERDTree {{{
 let sect = [
-			\"/home/jack/Dropbox/note",
-			\"/home/jack/Dropbox/ref"
-			\]
+		\'/home/jack/Dropbox/note',
+		\'/home/jack/Dropbox/ref'
+		\]
 
 if index(sect, getcwd()) == -1
 	autocmd VimEnter * NERDTree
