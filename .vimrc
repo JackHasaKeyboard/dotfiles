@@ -1,9 +1,7 @@
 " keyboard {{{
-nnoremap ; :
+noremap ; :
 
 noremap r <C-r>
-
-noremap ; :
 
 noremap H ^
 noremap L $
