@@ -204,7 +204,6 @@ if index(sect, base) == -1
 endif
 
 " nerdtree {{{
-autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd w
 
 let NERDTreeShowHidden=1
