@@ -201,10 +201,7 @@ let sect = [
 		\'/home/jack/Dropbox/ref'
 		\]
 
-if index(sect, getcwd()) == -1
-	autocmd VimEnter * NERDTree
-	autocmd VimEnter * wincmd w
-endif
+autocmd VimEnter * if index(sect, getcwd()) == -1 && @% != '.git/COMMIT_EDITMSG' | NERDTree | wincmd w | endif
 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " }}}
