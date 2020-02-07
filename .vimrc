@@ -30,6 +30,9 @@ noremap <silent> <C-f> :NERDTreeToggle<CR><C-w><C-w>
 
 nnoremap p p=`]
 
+nmap ZZ <Nop>
+nmap ZQ <Nop>
+
 " leader {{{
 let mapleader=','
 
