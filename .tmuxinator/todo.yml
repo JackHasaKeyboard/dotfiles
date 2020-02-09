@@ -1,0 +1,7 @@
+name: TODO
+root: ~/Dropbox/note
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - editor: vim TODO.org
