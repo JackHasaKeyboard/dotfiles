@@ -198,8 +198,6 @@ let g:python_host_prog='/usr/bin/python'
 " }}}
 
 " NERDTree {{{
-let NERDTreeShowHidden=1
-
 let sect = [
 		\'/home/jack/Dropbox/note',
 		\'/home/jack/Dropbox/ref'
