@@ -255,6 +255,8 @@ let g:table_mode_corner='|'
 " }}}
 
 " vim-airline {{{
+let g:airline_section_z = "%l/%L"
+
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 
