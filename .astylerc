@@ -17,8 +17,11 @@
 --pad-method-colon=none
 --unpad-paren
 
+--attach-return-type
+--attach-return-type-decl
+
 --max-instatement-indent=40
 --keep-one-line-statements
 --max-code-length=79
 
---add-braces
+--close-templates
