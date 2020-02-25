@@ -2,8 +2,11 @@
 
 --indent=tab
 --indent-preprocessor
---indent-classes
 --indent-switches
+
+--indent-preproc-block
+--indent-preproc-define
+--indent-preproc-cond
 
 --align-pointer=type
 --align-reference=type
