@@ -222,6 +222,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # }}}
 
 # LaTeX {{{
+PATH=$PATH:/Library/TeX/texbin
+
 alias pdflatex="pdflatex -output-directory ~/out"
 
 function vu {
