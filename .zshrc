@@ -1,12 +1,8 @@
 export PS1="%d%% "
 
-export ZSH_CUSTOM="~/.oh-my-zsh/custom"
-
-plugins=(
-	zsh-autosuggestions
-)
-
 alias td="vim ~/Dropbox/note/TODO.org"
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 function note() {
 	if [ "$1" != ""  ]; then
