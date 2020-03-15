@@ -1,6 +1,8 @@
 # general {{{
 export PS1="%d%% "
 
+setopt autocd
+
 # alias, function {{{
 alias td="vim ~/Dropbox/note/TODO.org"
 
