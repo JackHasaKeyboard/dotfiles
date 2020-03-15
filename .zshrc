@@ -1,8 +1,8 @@
+# general {{{
 export PS1="%d%% "
 
+# alias, function {{{
 alias td="vim ~/Dropbox/note/TODO.org"
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 function note() {
 	if [ "$1" != ""  ]; then
@@ -19,3 +19,19 @@ function ref() {
 		vim ~/Dropbox/ref/
 	fi
 }
+# }}}
+# }}}
+
+# script {{{
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# }}}
+
+# LaTeX {{{
+PATH=$PATH:/Library/TeX/texbin
+
+alias pdflatex="pdflatex -output-directory ~/out"
+
+function vu {
+	zathura ~/out/"$1".pdf
+}
+# }}}
