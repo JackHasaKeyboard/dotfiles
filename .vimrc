@@ -302,3 +302,7 @@ let g:user_emmet_expandabbr_key='<Tab>'
 " vim-signature {{{
 abbr delm delm!<CR>:SignatureRefresh
 " }}}
+
+" vimtex {{{
+let g:vimtex_fold_enabled=1
+" }}}
