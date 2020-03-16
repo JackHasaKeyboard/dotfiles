@@ -73,6 +73,10 @@ set directory=~/.vim/swp//
 set lazyredraw
 " }}}
 
+" clipboard {{{
+set paste
+" }}}
+
 " tab {{{
 nnoremap <C-h> :tabprev<CR>
 nnoremap <C-l> :tabnext<CR>
