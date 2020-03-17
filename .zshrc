@@ -39,6 +39,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='underline'
 alias vim="nvim -u ~/.nvimrc"
 # }}}
 
+# Tmux {{{
+alias tmux="tmux -2"
+alias sess="tmuxinator"
+# }}}
+
 # LaTeX {{{
 PATH=$PATH:/Library/TeX/texbin
 
