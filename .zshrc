@@ -3,6 +3,8 @@ export PS1="%d%% "
 
 setopt autocd
 
+set -o vi
+
 # alias, function {{{
 alias td="vim ~/Dropbox/note/TODO.org"
 
