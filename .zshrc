@@ -27,7 +27,9 @@ function ref() {
 # script {{{
 # autosuggestions {{{
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 bindkey '^I' autosuggest-accept
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='underline'
 # }}}
 # }}}
 
