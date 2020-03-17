@@ -35,6 +35,10 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='underline'
 # }}}
 # }}}
 
+# editor {{{
+alias vim="nvim -u ~/.nvimrc"
+# }}}
+
 # LaTeX {{{
 PATH=$PATH:/Library/TeX/texbin
 
