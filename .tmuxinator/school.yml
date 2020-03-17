@@ -1,0 +1,11 @@
+name: school
+root: ~/Dropbox/schol/<%= @args[0] %>
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - work: vim
+  - cmd:
+
+  - ref: vim
+  - scratch: vim
