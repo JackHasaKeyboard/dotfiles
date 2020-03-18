@@ -1,46 +1,55 @@
-BasedOnStyle : WebKit
-									 TabWidth : 2 IndentWidth : 2 UseTab : Always
+BasedOnStyle: WebKit
+TabWidth: 2
+IndentWidth: 2
+UseTab: Always
 
-																												 --
-																												 - Language : Cpp
+---
+Language: Cpp
 
-#declaration
-																																					DerivePointerAlignment : false PointerAlignment : Left
+# declaration
+DerivePointerAlignment: false
+PointerAlignment: Left
 
-#alignment
-																																																																NamespaceIndentation : All
+# alignment
+NamespaceIndentation: All
 
-																																																																													 AlignAfterOpenBracket : Align
+AlignAfterOpenBracket: Align
 
-#line
-																																																																																											 SpaceAfterCStyleCast : true SpaceBeforeAssignmentOperators : true SpaceBeforeCpp11BracedList : false SpaceBeforeCtorInitializerColon : true SpaceBeforeRangeBasedForLoopColon : true SpacesBeforeTrailingComments : 1
+# line
+SpaceAfterCStyleCast: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpacesBeforeTrailingComments: 1
 
-																																																																																																																																																																																			 DerivePointerAlignment : true
+DerivePointerAlignment: true
 
-#line break
-																																																																																																																																																																																																AllowShortBlocksOnASingleLine : true
+# line break
+AllowShortBlocksOnASingleLine: true
 
-																																																																																																																																																																																																																AllowShortCaseLabelsOnASingleLine : false AllowAllArgumentsOnNextLine : false
+AllowShortCaseLabelsOnASingleLine: false
+AllowAllArgumentsOnNextLine: false
 
-																																																																																																																																																																																																																																																				AllowAllArgumentsOnNextLine : true
+AllowAllArgumentsOnNextLine: true
 
-																																																																																																																																																																																																																																																																			AllowAllConstructorInitializersOnNextLine : true
+AllowAllConstructorInitializersOnNextLine: true
 
-																																																																																																																																																																																																																																																																																									AllowShortFunctionsOnASingleLine : None
+AllowShortFunctionsOnASingleLine: None
 
-																																																																																																																																																																																																																																																																																																												 AllowShortLambdasOnASingleLine : false
+AllowShortLambdasOnASingleLine: false
 
-																																																																																																																																																																																																																																																																																																																													AlwaysBreakBeforeMultilineStrings : true
+AlwaysBreakBeforeMultilineStrings: true
 
-																																																																																																																																																																																																																																																																																																																																															BreakBeforeBraces : Attach
+BreakBeforeBraces: Attach
 
-																																																																																																																																																																																																																																																																																																																																																											IndentCaseLabels : true
+IndentCaseLabels: true
 
-																																																																																																																																																																																																																																																																																																																																																																				 KeepEmptyLinesAtTheStartOfBlocks : false
+KeepEmptyLinesAtTheStartOfBlocks: false
 
-																																																																																																																																																																																																																																																																																																																																																																																						MaxEmptyLinesToKeep : 1
+MaxEmptyLinesToKeep: 1
 
-																																																																																																																																																																																																																																																																																																																																																																																						BreakConstructorInitializers : AfterColon
-																																																																																																																																																																																																																																																																																																																																																																																																							 ConstructorInitializerIndentWidth : 1
+BreakConstructorInitializers: AfterColon
+ConstructorInitializerIndentWidth: 1
 
-																																																																																																																																																																																																																																																																																																																																																																																																					 BreakInheritanceList : BeforeColon #TODO : fix
+BreakInheritanceList: BeforeColon # TODO: fix
