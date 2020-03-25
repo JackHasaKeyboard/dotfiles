@@ -198,6 +198,7 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'adriaanzon/vim-emmet-ultisnips' | Plug 'sirver/ultisnips'
 Plug 'https://github.com/lervag/vimtex'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 " }}}
@@ -311,4 +312,10 @@ abbr delm delm!<CR>:SignatureRefresh
 
 " vimtex {{{
 let g:vimtex_fold_enabled=1
+" }}}
+
+" ALE {{{
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
 " }}}
