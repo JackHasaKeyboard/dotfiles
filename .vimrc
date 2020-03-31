@@ -197,7 +197,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'adriaanzon/vim-emmet-ultisnips' | Plug 'sirver/ultisnips'
-Plug 'https://github.com/lervag/vimtex'
+Plug 'lervag/vimtex'
 Plug 'dense-analysis/ale'
 
 call plug#end()
