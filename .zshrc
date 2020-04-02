@@ -6,6 +6,9 @@ setopt autocd
 set -o vi
 
 # alias, function {{{
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
 alias td="vim ~/Dropbox/note/TODO.org"
 
 function note() {
