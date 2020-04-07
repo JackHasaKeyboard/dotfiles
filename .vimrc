@@ -74,7 +74,7 @@ set lazyredraw
 " }}}
 
 " clipboard {{{
-set paste
+set nopaste
 " }}}
 
 " tab {{{
