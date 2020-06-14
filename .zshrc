@@ -38,6 +38,13 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='underline'
 # }}}
 # }}}
 
+# history {{{
+HISTFILE=~/.zsh/history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt SHARE_HISTORY
+# }}}
+
 # editor {{{
 alias vim="nvim -u ~/.nvimrc"
 # }}}
@@ -56,3 +63,5 @@ function vu {
 	zathura ~/out/"$1".pdf
 }
 # }}}
+
+set -g default-terminal "rxvt-unicode-256color"
