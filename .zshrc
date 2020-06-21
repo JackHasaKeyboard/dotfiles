@@ -45,7 +45,7 @@ alias sess="tmuxinator"
 # }}}
 
 # LaTeX {{{
-PATH=$PATH:/Library/TeX/texbin
+PATH=$PATH:/usr/local/texlive/2020/bin/x86_64-darwin
 
 alias pdflatex="pdflatex -output-directory ~/out"
 
