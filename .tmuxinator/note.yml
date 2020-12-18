@@ -1,0 +1,9 @@
+name: note
+root: ~/Dropbox/note/
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - TODO: td
+
+  - log: note log
