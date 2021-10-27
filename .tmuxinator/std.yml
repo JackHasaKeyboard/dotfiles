@@ -1,4 +1,4 @@
-name: std
+name: <%= File.basename(Dir.pwd) %>
 
 tmux_options: -f ~/.tmux.conf
 
