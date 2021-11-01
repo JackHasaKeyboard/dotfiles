@@ -5,6 +5,10 @@ setopt autocd
 
 set -o vi
 
+# editor {{{
+alias vim="nvim -u ~/.nvimrc"
+# }}}
+
 # alias, function {{{
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -43,10 +47,6 @@ HISTFILE=~/.zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt SHARE_HISTORY
-# }}}
-
-# editor {{{
-alias vim="nvim -u ~/.nvimrc"
 # }}}
 
 # Tmux {{{
