@@ -12,7 +12,7 @@ alias grep='grep --color=auto'
 alias td="vim ~/Dropbox/note/TODO.org"
 
 function note() {
-	if [ "$1" != ""  ]; then
+	if [ "$1" != "" ]; then
 		vim ~/Dropbox/note/"$1".org
 	else
 		vim ~/Dropbox/note/
@@ -20,7 +20,7 @@ function note() {
 }
 
 function ref() {
-	if [ "$1" != ""  ]; then
+	if [ "$1" != "" ]; then
 		vim ~/Dropbox/ref/"$1".org
 	else
 		vim ~/Dropbox/ref/
