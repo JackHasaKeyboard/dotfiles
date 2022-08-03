@@ -53,6 +53,8 @@ nnoremap <Leader>t :TableModeToggle<CR>
 
 nnoremap <Leader>= K=J''
 nnoremap <Leader>L call setline('.', getline('.') . ';')
+
+nnoremap <Leader>s "=strftime('%b %w, %Y')<C-M>p
 " }}}
 " }}}
 
