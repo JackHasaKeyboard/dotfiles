@@ -1,0 +1,12 @@
+name: <%= File.basename(Dir.pwd) %>
+
+tmux_options: -f ~/.tmux.conf
+
+windows:
+    - editor: vim
+
+    - server:
+        panes:
+            - npm start
+            - npm build
+            -
