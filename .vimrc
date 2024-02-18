@@ -28,6 +28,8 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 noremap <silent> <C-f> :NERDTreeToggle<CR><C-w><C-w>
 
+noremap Y yy
+
 nnoremap p p=`]
 
 nmap ZZ <Nop>
@@ -134,10 +136,7 @@ set nohls
 set t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-colo solarized
-let g:solarized_termcolors=256
-
-set bg=dark
+colo morning
 
 nnoremap <Leader>p :so ~/.vim/autoload/palette.vim<CR>
 
@@ -190,7 +189,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
 Plug 'gioele/vim-autoswap'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'jceb/vim-orgmode'
+" Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'foosoft/vim-argwrap'
