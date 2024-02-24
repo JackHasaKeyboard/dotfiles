@@ -1,5 +1,5 @@
 ! window
-URxvt.scrollBar: false 
+URxvt.scrollBar: false
 URxvt.saveLines: 0
 
 ! font
